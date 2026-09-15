@@ -94,10 +94,10 @@ jobs:
         with:
           name: publish_artifact
           path: ${{ runner.temp }}/publish
-       - name: Azure WebApp
-         uses: Azure/webapps-deploy@v2
-         with:
+      - name: Azure WebApp
+        uses: Azure/webapps-deploy@v2
+        with:
           app-name: ${{ steps.deploywebapp.outputs.webappname }}
           # app-name: ${{ env.AZURE-WEBAPP-NAME }}
           package: ${{ runner.temp }}/publish
-          
+ 
